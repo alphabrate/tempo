@@ -1,0 +1,106 @@
+:root {
+    user-select: none;
+    --background: #1C1C1C;
+    --tap-zone: #303030;
+    --text: #F1F1F1;
+    --shadow: rgba(241, 241, 241, 0.5);
+    --grad: radial-gradient(49.93% 49.93% at 50% 50%, #FFFFFF 0%, #FFFFFF 43.75%, rgba(248, 248, 248, 0) 100%, rgba(0, 0, 0, 0) 100%);
+}
+
+@font-face {
+    font-family: "Edwin";
+    src: url("./edwin.otf");
+}
+
+* {
+    font-family: "Edwin";
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+	    --background: #1C1C1C;
+        --tap-zone: #303030;
+	    --text: #F1F1F1;
+        --shadow: rgba(241, 241, 241, 0.5);
+        --grad: radial-gradient(49.93% 49.93% at 50% 50%, #FFFFFF 0%, #FFFFFF 43.75%, rgba(248, 248, 248, 0) 100%, rgba(0, 0, 0, 0) 100%);
+	}
+}
+
+@media (prefers-color-scheme: light) {
+	:root {
+	    --background: #F0F0F0;
+        --tap-zone: #F8F8F8;
+	    --text: #1C1C1C;
+        --shadow: rgba(199, 199, 199, 0.5);
+        --grad: radial-gradient(49.93% 49.93% at 50% 50%, #5A5A5A 0%, #5A5A5A 43.75%, rgba(248, 248, 248, 0) 100%, rgba(255, 255, 255, 0) 100%);
+	}
+}
+
+
+.background {
+    background-color: var(--background);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 0;
+    overflow: hidden;
+    z-index: -1;
+}
+
+.circle {
+    background-color: var(--tap-zone);
+    width: 130vw;
+    max-width: 520px;
+    height: 130vw;
+    max-height: 520px;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    box-shadow: 0px 0px 180px var(--shadow);
+    z-index: 100;
+}
+
+.tempo {
+    position: absolute;
+    color: var(--text);
+    left: 50%;
+    bottom: -50px;
+    transform: translateX(-50%);
+    font-size: 96px;
+    width: max-content;
+}
+
+.feedback {
+    position: absolute;
+    animation: feedback 0.1s;
+    background: var(--grad);
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    opacity: 0.2;
+    transition: opacity 0.2s;
+}
+
+#clear {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 25vh;
+    width: 100vw;
+    transition: 0.3s;
+}
+
+@keyframes feedback {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    100% {
+        opacity: 0.2;
+        transform: scale(1.1);
+    }
+}
