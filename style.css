@@ -13,6 +13,14 @@
     right: 0;
 }
 
+.top>svg {
+    max-width: 80vw;
+}
+
+body {
+    overflow-x: hidden;
+}
+
 .container {
     margin-top: 550px;
     display: flex;
