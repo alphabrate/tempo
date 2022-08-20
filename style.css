@@ -3,7 +3,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/images/piano.webp);
+    background-image: url(images/piano.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
