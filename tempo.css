@@ -4,7 +4,7 @@
     --tap-zone: #303030;
     --text: #F1F1F1;
     --shadow: rgba(241, 241, 241, 0.5);
-    --grad: radial-gradient(49.93% 49.93% at 50% 50%, #FFFFFF 0%, #FFFFFF 43.75%, rgba(248, 248, 248, 0) 100%, rgba(0, 0, 0, 0) 100%);
+    --grad: radial-gradient(49.93% 49.93% at 50% 50%, #5A5A5A 0%, #5A5A5A 43.75%, rgba(248, 248, 248, 0) 100%, rgba(255, 255, 255, 0) 100%);
 }
 
 @font-face {
@@ -22,7 +22,8 @@
         --tap-zone: #303030;
 	    --text: #F1F1F1;
         --shadow: rgba(241, 241, 241, 0.5);
-        --grad: radial-gradient(49.93% 49.93% at 50% 50%, #FFFFFF 0%, #FFFFFF 43.75%, rgba(248, 248, 248, 0) 100%, rgba(0, 0, 0, 0) 100%);
+        --grad: radial-gradient(49.93% 49.93% at 50% 50%, #5A5A5A 0%, #5A5A5A 43.75%, rgba(248, 248, 248, 0) 100%, rgba(255, 255, 255, 0) 100%);
+        
 	}
 }
 
@@ -32,10 +33,64 @@
         --tap-zone: #F8F8F8;
 	    --text: #1C1C1C;
         --shadow: rgba(199, 199, 199, 0.5);
-        --grad: radial-gradient(49.93% 49.93% at 50% 50%, #5A5A5A 0%, #5A5A5A 43.75%, rgba(248, 248, 248, 0) 100%, rgba(255, 255, 255, 0) 100%);
 	}
 }
 
+a {
+    cursor: pointer;
+}
+
+#nav::-webkit-scrollbar {
+    width: 0;
+}
+
+/* #top{
+    background-color: rgba(0, 191, 255, 0.2);
+}
+#clear{
+    background-color: rgba(255, 0, 0, 0.2);
+} */
+
+svg.text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+svg.text>path{
+    fill: var(--background);
+}
+
+#nav {
+    width: calc(100% - 100px);
+    padding: 50px;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--tap-zone);
+    box-shadow: 0 1px 5px var(--shadow);
+    color: var(--text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    transition: height 0.5s, padding 0.5s;
+    overflow-y: scroll;
+}
+
+#nav>* {
+    margin: 15px;
+    font-size: 25px;
+}
+
+#nav a {
+    color: white;
+    text-decoration: none;
+}
 
 .background {
     background-color: var(--background);
@@ -83,6 +138,15 @@
     border-radius: 50%;
     opacity: 0.2;
     transition: opacity 0.2s;
+}
+
+#top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 15vh;
+    width: 100vw;
+    transition: 0.3s;
 }
 
 #clear {

@@ -30,6 +30,9 @@ document.getElementById("clear").onclick=()=>{
     lasttimestamp = 0;
     cs = 0;
 };
+document.getElementById("top").onclick=()=>{
+    
+};
 circle.addEventListener("mousedown",()=>{
     clearTimeout(to);
     circle.innerHTML+=`<div class="feedback" id="fb${clicks}"></div>`;
@@ -59,6 +62,8 @@ circle.addEventListener("mousedown",()=>{
             ${Math.ceil(timeforonemu/avgTime)}`;
         }
     }
+    document.getElementById("PPing").href="play.html?bpm="+Math.ceil(timeforonemu/avgTime)+"&s=auto";
+    document.getElementById("play").innerText = `Play in : ${Math.ceil(timeforonemu/avgTime)} BPM`
     to = setTimeout(()=>{
         isDarkTheme = window.matchMedia("(prefers-color-scheme: dark)");
         if (isDarkTheme.matches) {

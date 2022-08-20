@@ -1,0 +1,60 @@
+.top {
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/piano.webp);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.container {
+    margin-top: 550px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 32px;
+    font-weight: 100;
+    font-family: 'times';
+}
+
+.p {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin: 0;
+}
+
+.p>p{
+    margin: 0;
+    width: 60%;
+    font-size: 20px;
+    min-width: 100px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+.showup{
+    max-height: 500px;
+    border-radius: 15px;
+    margin: 15px;
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
