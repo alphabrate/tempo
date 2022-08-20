@@ -17,7 +17,7 @@
     max-width: 80vw;
 }
 
-body {
+body,html {
     overflow-x: hidden;
 }
 
